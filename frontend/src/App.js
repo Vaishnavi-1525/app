@@ -157,7 +157,9 @@ const JobTracker = () => {
                 key={event.id}
                 event={event}
                 onMarkDone={handleMarkDone}
+                onEdit={setEditingEvent}
                 showMarkDone={activeTab === 'upcoming'}
+                showEdit={isAuthenticated}
               />
             ))}
           </div>
