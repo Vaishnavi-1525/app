@@ -180,8 +180,30 @@ const JobTracker = () => {
         )}
       </div>
 
-      {/* Add Event Button */}
-      <AddEventModal onAddEvent={handleAddEvent} />
+      {/* Add Event Button - Only show if authenticated */}
+      {isAuthenticated && <AddEventModal onAddEvent={handleAddEvent} />}
+
+      {/* Edit Event Modal */}
+      {editingEvent && (
+        <EditEventModal
+          event={editingEvent}
+          open={!!editingEvent}
+          onClose={() => setEditingEvent(null)}
+          onEditEvent={handleEditEvent}
+        />
+      )}
+
+      {/* Login Modal */}
+      <LoginModal 
+        open={showLoginModal} 
+        onClose={() => setShowLoginModal(false)} 
+      />
+
+      {/* Profile Modal */}
+      <ProfileModal 
+        open={showProfileModal} 
+        onClose={() => setShowProfileModal(false)} 
+      />
 
       {/* Bottom Navigation */}
       <BottomNavigation
