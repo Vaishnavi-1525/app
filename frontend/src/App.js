@@ -222,9 +222,11 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<JobTracker />} />
-        </Routes>
+        <AuthProvider>
+          <Routes>
+            <Route path="/" element={<JobTracker />} />
+          </Routes>
+        </AuthProvider>
       </BrowserRouter>
     </div>
   );
