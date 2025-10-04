@@ -18,6 +18,10 @@ const JobTracker = () => {
   const [events, setEvents] = useState(mockEvents);
   const [activeTab, setActiveTab] = useState('upcoming');
   const [eventCounts, setEventCounts] = useState(getEventCounts());
+  const [editingEvent, setEditingEvent] = useState(null);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [showProfileModal, setShowProfileModal] = useState(false);
+  const { user, isAuthenticated } = useAuth();
 
   // Update event counts when events change
   useEffect(() => {
