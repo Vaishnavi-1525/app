@@ -62,6 +62,15 @@ const JobTracker = () => {
     setEvents(prevEvents => [...prevEvents, newEvent]);
   };
 
+  const handleEditEvent = (updatedEvent) => {
+    setEvents(prevEvents =>
+      prevEvents.map(event =>
+        event.id === updatedEvent.id ? updatedEvent : event
+      )
+    );
+    setEditingEvent(null);
+  };
+
   const handleMarkDone = (eventId) => {
     setEvents(prevEvents =>
       prevEvents.map(event =>
