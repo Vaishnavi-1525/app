@@ -2,9 +2,9 @@ import React from 'react';
 import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { Badge } from './ui/badge';
-import { Calendar, Clock, Building, CheckCircle } from 'lucide-react';
+import { Calendar, Clock, Building, CheckCircle, Edit3 } from 'lucide-react';
 
-const EventCard = ({ event, onMarkDone, showMarkDone = true }) => {
+const EventCard = ({ event, onMarkDone, onEdit, showMarkDone = true, showEdit = true }) => {
   const getDaysRemaining = (eventDate) => {
     const today = new Date();
     const event = new Date(eventDate);
