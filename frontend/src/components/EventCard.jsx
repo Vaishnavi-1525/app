@@ -55,17 +55,30 @@ const EventCard = ({ event, onMarkDone, onEdit, showMarkDone = true, showEdit = 
               {event.status.charAt(0).toUpperCase() + event.status.slice(1)}
             </Badge>
           </div>
-          {showMarkDone && event.status === 'upcoming' && (
-            <Button
-              size="sm"
-              variant="outline"
-              onClick={() => onMarkDone(event.id)}
-              className="ml-2 text-green-600 border-green-200 hover:bg-green-50"
-            >
-              <CheckCircle className="w-4 h-4 mr-1" />
-              Mark Done
-            </Button>
-          )}
+          <div className="flex space-x-2 ml-2">
+            {showEdit && (
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => onEdit(event)}
+                className="text-blue-600 border-blue-200 hover:bg-blue-50"
+              >
+                <Edit3 className="w-4 h-4 mr-1" />
+                Edit
+              </Button>
+            )}
+            {showMarkDone && event.status === 'upcoming' && (
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => onMarkDone(event.id)}
+                className="text-green-600 border-green-200 hover:bg-green-50"
+              >
+                <CheckCircle className="w-4 h-4 mr-1" />
+                Mark Done
+              </Button>
+            )}
+          </div>
         </div>
 
         <div className="space-y-2 mb-3">
