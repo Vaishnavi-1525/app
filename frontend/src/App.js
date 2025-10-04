@@ -116,11 +116,33 @@ const JobTracker = () => {
                 <p className="text-sm text-gray-500">Stay organized, never miss an opportunity</p>
               </div>
             </div>
-            <div className="flex items-center space-x-1 px-3 py-1 bg-green-100 rounded-full">
-              <TrendingUp className="w-4 h-4 text-green-600" />
-              <span className="text-sm font-medium text-green-700">
-                {eventCounts.upcoming} Active
-              </span>
+            <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-1 px-3 py-1 bg-green-100 rounded-full">
+                <TrendingUp className="w-4 h-4 text-green-600" />
+                <span className="text-sm font-medium text-green-700">
+                  {eventCounts.upcoming} Active
+                </span>
+              </div>
+              {isAuthenticated ? (
+                <Avatar 
+                  className="w-8 h-8 cursor-pointer hover:ring-2 hover:ring-blue-500 transition-all"
+                  onClick={() => setShowProfileModal(true)}
+                >
+                  <AvatarImage src={user?.avatar} alt={user?.name} />
+                  <AvatarFallback className="text-xs">
+                    {user?.name?.split(' ').map(n => n[0]).join('') || 'U'}
+                  </AvatarFallback>
+                </Avatar>
+              ) : (
+                <Button 
+                  size="sm" 
+                  variant="outline"
+                  onClick={() => setShowLoginModal(true)}
+                >
+                  <User className="w-4 h-4 mr-1" />
+                  Login
+                </Button>
+              )}
             </div>
           </div>
         </div>
