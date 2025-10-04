@@ -3,10 +3,16 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
 import EventCard from './components/EventCard';
 import AddEventModal from './components/AddEventModal';
+import EditEventModal from './components/EditEventModal';
 import BottomNavigation from './components/BottomNavigation';
+import LoginModal from './components/LoginModal';
+import ProfileModal from './components/ProfileModal';
+import AuthProvider, { useAuth } from './components/AuthContext';
+import { Button } from './components/ui/button';
+import { Avatar, AvatarFallback, AvatarImage } from './components/ui/avatar';
 import { Toaster } from './components/ui/toaster';
 import { mockEvents, getEventsByStatus, getEventCounts, sortEventsByDate } from './mock/mockData';
-import { Calendar, TrendingUp } from 'lucide-react';
+import { Calendar, TrendingUp, User } from 'lucide-react';
 
 const JobTracker = () => {
   const [events, setEvents] = useState(mockEvents);
