@@ -64,7 +64,7 @@ The app will start at 👉 http://localhost:3000
 ```
 npm run build
 ```
--The build will be generated inside the /build folder.
+- The build will be generated inside the /build folder.
 - You can deploy this build on any static hosting service.
 
 ---
@@ -76,28 +76,12 @@ Screen	Description
 - ❌ Expired	Shows events automatically moved after expiry
 - ➕ Add Event	Floating button to quickly add new event details
 
----
-
-## 📌 Project Structure
-
-frontend/
-│
-├── public/               # Static files
-├── src/
-│   ├── components/       # Reusable UI components
-│   ├── pages/            # Upcoming, Completed, Expired views
-│   ├── hooks/            # Custom hooks (if any)
-│   ├── styles/           # CSS or Tailwind config
-│   └── App.js           # Root component
-│
-├── package.json
-└── README.md
 
 ---
 
 ## 🌱 Future Improvements
 
--🔔 Notifications / reminders for upcoming events
+- 🔔 Notifications / reminders for upcoming events
 - 📝 Event editing & deletion
 - 📅 Calendar view integration
 - 📊 Dashboard analytics for applied / completed / missed drives
