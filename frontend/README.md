@@ -1,70 +1,104 @@
-# Getting Started with Create React App
+# 🌐 Frontend – Job Application Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the **frontend of the Job Application Tracker** — a simple and smart web app designed to help students and job seekers **stay organized during placement drives**.  
+It is built using **React.js** and provides a **clean, minimal UI** to track upcoming events, completed rounds, and expired drives.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Key Frontend Features
 
-### `npm start`
+- 📝 **Event Creation** – Users can add new placement drive events with:
+  - Event Name  
+  - Date & Time  
+  - Platform Name  
+  - Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 📅 **Auto-Sorting** – Events are displayed with **nearest date first**.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- ⏳ **Remaining Days Display** – Each event card clearly shows how many days are left.
 
-### `npm test`
+- 🟡 **Upcoming | 🟢 Completed | 🔴 Expired Sections** – Clean categorization of events for easy tracking.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- 🔄 **Auto Status Update** – Past events move automatically to the **Expired** section if not marked done.
 
-### `npm run build`
+- 🧼 **Responsive & Simple UI** – Designed to work smoothly on both desktop and mobile.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧰 Tech Stack
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- ⚛️ **React.js** – Component-based UI  
+- 🧭 **React Router** – For navigation between sections (Upcoming / Completed / Expired)  
+- 💅 **CSS / Tailwind / Styled Components** – (Choose what you use) for styling  
+- 🔗 API integration with backend (Node.js / Emergent platform)
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🚀 Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Follow the steps below to run the frontend locally:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 1️⃣ Clone the Repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/Vaishnavi-1525/app.git
+cd app/frontend
+### 2️⃣ Install Dependencies
+```bash
+npm install
 
-## Learn More
+### 3️⃣ Run the Development Server
+```bash
+npm start
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+The app will start at 👉 http://localhost:3000
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 📦 Build for Production
+ To create an optimized production build:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+npm run build
 
-### Making a Progressive Web App
+-The build will be generated inside the /build folder.
+- You can deploy this build on any static hosting service.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📸 UI Overview
+Screen	Description
+- 🏠 Home	Lists all upcoming events sorted by date
+- ✅ Completed	Displays all events marked as done
+- ❌ Expired	Shows events automatically moved after expiry
+- ➕ Add Event	Floating button to quickly add new event details
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+---
 
-### Deployment
+## 📌 Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+csharp
+Copy code
+frontend/
+│
+├── public/               # Static files
+├── src/
+│   ├── components/       # Reusable UI components
+│   ├── pages/            # Upcoming, Completed, Expired views
+│   ├── hooks/            # Custom hooks (if any)
+│   ├── styles/           # CSS or Tailwind config
+│   └── App.js           # Root component
+│
+├── package.json
+└── README.md
 
-### `npm run build` fails to minify
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 🌱 Future Improvements
+
+-🔔 Notifications / reminders for upcoming events
+- 📝 Event editing & deletion
+- 📅 Calendar view integration
+- 📊 Dashboard analytics for applied / completed / missed drives
