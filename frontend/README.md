@@ -40,18 +40,19 @@ Follow the steps below to run the frontend locally:
 
 ### 1️⃣ Clone the Repository
 
-```bash
+```
 git clone https://github.com/Vaishnavi-1525/app.git
 cd app/frontend
+```
+
 ### 2️⃣ Install Dependencies
-```bash
+```
 npm install
-
+```
 ### 3️⃣ Run the Development Server
-```bash
+```
 npm start
-
-
+```
 
 The app will start at 👉 http://localhost:3000
 
@@ -60,9 +61,9 @@ The app will start at 👉 http://localhost:3000
 ## 📦 Build for Production
  To create an optimized production build:
 
-```bash
+```
 npm run build
-
+```
 -The build will be generated inside the /build folder.
 - You can deploy this build on any static hosting service.
 
@@ -79,8 +80,6 @@ Screen	Description
 
 ## 📌 Project Structure
 
-csharp
-Copy code
 frontend/
 │
 ├── public/               # Static files
